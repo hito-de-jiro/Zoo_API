@@ -11,8 +11,9 @@ __pycache__/
 .idea/
 
 # Temporary project files
-json_data.json
-
+raw_data.json
+csv_data.csv
+zoo_venv
 
 # Distribution / packaging
 .Python
