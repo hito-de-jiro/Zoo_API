@@ -1,5 +1,5 @@
 #! Python3
-# zoo_API.py -- site scraper https://www.zooplus.de/
+# Zoo_API.py -- site scraper https://www.zooplus.de/
 # accesses the API, and parses the received data
 # the data is saved in a CSV file
 import csv
@@ -108,10 +108,9 @@ def opening_hours(open_time):
 
 def csv_writer(data_dict):
     """Creating and saving a CSV file"""
-    data_csv = open('csv_data.csv', 'a', newline='', encoding='utf-8')
-    csv_dict_writer = csv.writer(data_csv)  # create headers in CSV-document
-    csv_dict_writer.writerow(data_dict)  # write to CSV
-    data_csv.close()
+    with open('csv_data.csv', 'a', newline='', encoding='utf-8') as data_csv:
+        csv_dict_writer = csv.writer(data_csv)  # create headers in CSV-document
+        csv_dict_writer.writerow(data_dict)  # write to CSV
 
 
 def main():
